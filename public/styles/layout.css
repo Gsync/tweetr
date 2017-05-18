@@ -23,3 +23,15 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ * {
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+ body .container {
+    position: relative;
+    top: 140px;
+    width: 450px;
+    margin: auto;
+    background-color: #fff;
+ }
