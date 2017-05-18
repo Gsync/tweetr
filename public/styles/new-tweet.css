@@ -1,3 +1,4 @@
+/*new tweet*/
 .new-tweet h2 {
 border-bottom: 1px solid;
 }
@@ -25,7 +26,44 @@ span.counter {
   color: #f00;
 }
 
+
+/* old tweets*/
+
+article.tweet {
+  position: relative;
+  padding: 0;
+  margin-top: 25px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+article.tweet:hover {
+  background-color: lightgray;
+}
+
+
 article.tweet header {
   background-color: lightgray;
+  border-radius: 10px;
 
+}
+
+article.tweet footer {
+  margin: 0;
+  border-top: 1px solid grey;
+}
+
+img.avatar {
+  margin: 10px;
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+}
+
+span.profileName {
+  float: left;
+}
+
+span.userName {
+  float: right;
 }
