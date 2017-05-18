@@ -24,3 +24,8 @@ span.counter {
 
   color: #f00;
 }
+
+article.tweet header {
+  background-color: lightgray;
+
+}
