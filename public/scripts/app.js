@@ -43,14 +43,17 @@ $(() => {
   }
 
   loadTweets();
-});
 
-
-$(() => {
   $('#tweetSubmit').on('submit', function(event) {
+    if (!($(this.text).val())) {
+      alert('Please enter your tweet!');
+    }
+    if (($(this.text).val().length) > 140) {
+      alert('Number of characters in a tweet cannot be more than 140!');
+    }
   event.preventDefault();
   //console.log($(this).serialize());
   });
-//renderTweet(tweetData);
+
 });
 
