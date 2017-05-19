@@ -5,9 +5,9 @@
  */
 //Object snippet from initial tweet json object
 
-var tweetData = {
-
-"user": {
+var tweetData = [
+  {
+    "user": {
       "name": "Newton",
       "avatars": {
         "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
@@ -20,8 +20,39 @@ var tweetData = {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
     "created_at": 1461116232227
-}
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": {
+        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
+        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
+        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+      },
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Johann von Goethe",
+      "avatars": {
+        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+      },
+      "handle": "@johann49"
+    },
+    "content": {
+      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+    },
+    "created_at": 1461113796368
+  }
+]
 
+//Function to generate html elements for tweets using jquery
 function createTweetElement(obj) {
   var $tweet  = $('<article>');
   var $content= $('<p>');
@@ -38,13 +69,15 @@ function createTweetElement(obj) {
 return $tweet;
 
 }
-
-$(document).ready(function() {
-
-  var $tweet = createTweetElement(tweetData);
-  $('#tweets-container').append($tweet);
-
-  //console.log($tweet);
-
+//Render the tweets into the above elements
+function renderTweet(tweets) {
+  $(document).ready(function() {
+    tweets.forEach(function(tweet) {
+      var $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet);
+  });
 });
+}
+
+renderTweet(tweetData);
 
