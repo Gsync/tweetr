@@ -1,3 +1,5 @@
+//function to count number of characters typed for the tweet..
+//..and change color to red when reaches the max limit
 $(document).ready(function() {
 
   $('.new-tweet form textarea').on('keyup', function() {
