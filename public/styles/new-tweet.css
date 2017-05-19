@@ -37,12 +37,18 @@ article.tweet {
   border-radius: 10px;
 }
 
+article.tweet p {
+  padding: 5px;
+}
+
 article.tweet:hover {
   background-color: lightgray;
 }
 
 
 article.tweet header {
+  width: 100%;
+  display: inline-block;
   background-color: lightgray;
   border-radius: 10px;
 
@@ -54,16 +60,19 @@ article.tweet footer {
 }
 
 img.avatar {
+
+  float: left;
   margin: 10px;
   border-radius: 5px;
   width: 48px;
   height: 48px;
 }
 
-span.profileName {
+h2.profileName {
   float: left;
 }
 
-span.userName {
+p.userName {
   float: right;
+
 }

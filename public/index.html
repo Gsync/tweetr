@@ -19,6 +19,7 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
@@ -40,16 +41,16 @@
     <span class="counter"></span>
     </form>
     </section>
-    <section>
+    <section id='tweets-container'>
       <article class='tweet'>
           <header>
               <img class='avatar' src='/images/avatar.png'>
-              <span class='profileName'><h2>Lorem ipsum</h2></span>
-              <span class='userName'><p>@lorem</p></span>
+              <h2 class='profileName'>Lorem ipsum</h2>
+              <p class='userName'>@lorem</p>
           </header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deleniti nobis itaque maiores repellat nihil modi quibusdam totam officia voluptatum, unde, consequuntur earum repellendus veritatis voluptates dolore nisi aspernatur ipsam.</p>
+          <p class='tweetContent'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deleniti nobis itaque maiores repellat nihil modi quibusdam totam officia voluptatum, unde, consequuntur earum repellendus veritatis voluptates dolore nisi aspernatur ipsam.</p>
           <footer>
-            <p>10 days ago</p>
+            10 days ago
           </footer>
       </article>
     </section>
