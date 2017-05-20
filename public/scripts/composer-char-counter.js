@@ -12,7 +12,6 @@ $(document).ready(function() {
     } else {
       $('.new-tweet span:first').removeClass('red');
 
-    console.log(charLeft);
     }
   });
 

@@ -25,7 +25,7 @@ return $tweet;
 function renderTweet(tweets) {
     tweets.forEach(function(tweet) {
       var $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     });
 }
 
@@ -45,14 +45,22 @@ $(() => {
   loadTweets();
 
   $('#tweetSubmit').on('submit', function(event) {
+    event.preventDefault();
+
     if (!($(this.text).val())) {
       alert('Please enter your tweet!');
     }
     if (($(this.text).val().length) > 140) {
       alert('Number of characters in a tweet cannot be more than 140!');
+    } else {
+        $.ajax({
+      method: 'POST',
+      url:    '/tweets',
+      data: $(this).serialize()
+    });
+      this.reset();
+      loadTweets();
     }
-  event.preventDefault();
-  //console.log($(this).serialize());
   });
 
 });
