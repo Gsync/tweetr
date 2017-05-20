@@ -62,9 +62,11 @@ $(() => {
       loadTweets();
     }
   });
-  //Toggle button
+  //Toggle button (show/hide new tweeet) and autoselect textarea
   $('#compose').on('click', function() {
     $('section.new-tweet').toggle();
+    $('section.new-tweet textarea').focus();
+
   });
 
 
