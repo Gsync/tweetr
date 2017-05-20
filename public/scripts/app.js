@@ -62,6 +62,11 @@ $(() => {
       loadTweets();
     }
   });
+  //Toggle button
+  $('#compose').on('click', function() {
+    $('section.new-tweet').toggle();
+  });
+
 
 });
 
