@@ -9,6 +9,26 @@
     color: #e8fdff;
 }
 
+#nav-bar .menu {
+  padding: 8px;
+  float: right;
+}
+
+#nav-bar button {
+  background-color: #eee;
+  border: 1px solid gray;
+  padding: 18px 36px;
+  border-radius: 8px;
+  font-size: 22px;
+  color: #00a087;
+}
+
+#nav-bar button:hover {
+  background-color: #c7fff6;
+  color: #000;
+}
+
+
 #nav-bar .logo {
     float: left;
     width: 80px;
